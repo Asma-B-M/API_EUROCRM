@@ -25,7 +25,7 @@ app.get('/contracts', async (req, res) => {
     // Récupérez une connexion à partir du pool
     const client = await pool.connect();
 
-    const result = client.query('SELECT * FROM contract WHERE status IN (', waiting - prepay - el, ', ', waiting - prepay - NG, ', ', accepted, ')');
+    const result = client.query('SELECT * FROM contract WHERE status IN (', waiting-prepay-el, ', ', waiting-prepay-NG, ', ', accepted, ')');
 
     const contracts = result.rows;
     
