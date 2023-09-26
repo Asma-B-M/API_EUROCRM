@@ -21,13 +21,11 @@ app.use(express.json());
 // Endpoint pour récupérer tous les contrats
 app.get('/contracts', async (req, res) => {
   try {
-    console.log("hhhhhhh");
 
     // Récupérez une connexion à partir du pool
     const client = await pool.connect();
 
     const result = client.query('SELECT * FROM contract WHERE status IN (', waiting - prepay - el, ', ', waiting - prepay - NG, ', ', accepted, ')');
-    console.log("resulttttt", result);
 
     const contracts = result.rows;
     
